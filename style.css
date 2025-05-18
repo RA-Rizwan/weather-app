@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.search-box {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-input-container {
+    flex: 1;
+    position: relative;
+}
+
+#city-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#city-input:focus {
+    border-color: #00b4d8;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+
+.suggestions.active {
+    display: block;
+}
+
+.suggestion-item {
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+#search-btn {
+    padding: 0.8rem 1.5rem;
+    background: #00b4d8;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#search-btn:hover {
+    background: #0077b6;
+}
+
+.weather-box {
+    text-align: center;
+}
+
+.weather-info h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.weather-icon {
+    margin: 1rem 0;
+}
+
+.weather-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0077b6;
+    margin: 1rem 0;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+}
+
+.humidity, .wind {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.humidity span:first-child, .wind span:first-child {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.humidity span:last-child, .wind span:last-child {
+    color: #333;
+    font-weight: 500;
+}
+
+.weather-description {
+    color: #666;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin-top: 1rem;
+} 
